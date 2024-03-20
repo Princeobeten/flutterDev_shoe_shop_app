@@ -45,7 +45,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
 
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Image.asset(widget.product['imageUrl'].toString()),
+            child: Image.asset(widget.product['imageUrl'].toString(), height: 250,),
           ), const Spacer(flex: 2,), 
 
           Container( height: 250, decoration: BoxDecoration(
@@ -81,7 +81,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 ElevatedButton(onPressed: onTap, 
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).primaryColor, 
-                  minimumSize: const Size(double.infinity, 50), 
+                  fixedSize: const Size(350, 50), 
                 ),
                 child: const Text('Add To Cart', style: TextStyle(
                   color: Colors.black, fontSize: 16, fontWeight: FontWeight.w600
